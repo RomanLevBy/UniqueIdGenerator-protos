@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "/api";
+
+message GenerateResponse {
+    int64 uniqueId = 1;
+}
+
+message GenerateRequest {}
+
+service UniqueIdGenerator {
+    rpc Generate(GenerateRequest) returns (GenerateResponse);
+}
